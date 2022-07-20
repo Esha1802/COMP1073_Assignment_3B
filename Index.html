@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Smoothie Order| COMP1073 Client-Side JavaScript</title>
+	<link rel="stylesheet" href="css/smoothie.css">
+</head>
+<body>
+	<h1>The Smoothie Shop</h1>
+	<section>
+        <form id="orderForm">
+            <table>
+                <tr>
+                    <td>First Name: </td>
+                    <td>
+                       <input type="text" id="firstName"/>
+                    </td>
+                    <td>Last Name: </td>
+                    <td>
+                       <input type="text" id="lastName"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email Address:</td>
+                    <td>
+                        <input type="email" id="emailAddress"/>
+                    </td>
+                    <td>Phone Number:</td>
+                    <td>
+                        <input type="tel" id="phoneNumber"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ingredients:</td>
+                    <td>
+                        <input type="checkbox" id="fruit" name="fruit" value="Fruit" onclick="calculateTotal(10, 'fruit')">
+                        <label for="fruit"> Fruit ($10.00)</label><br>
+                        <input type="checkbox" id="cream" name="cream" value="Cream" onclick="calculateTotal(20, 'cream')">
+                        <label for="cream"> Extra Cream ($20.00)</label><br>
+                        <input type="checkbox" id="oats" name="oats" value="Oats" onclick="calculateTotal(30, 'oats')">
+                        <label for="oats"> Oats ($30.00)</label><br>
+                    </td>
+                    <td colspan="2">
+                        <input type="checkbox" id="proteinPowder" name="proteinPowder" value="Protein Powder" onclick="calculateTotal(15, 'proteinPowder')">
+                        <label for="proteinPowder"> Protein Powder ($15.00)</label><br>
+                        <input type="checkbox" id="seeds" name="seeds" value="Seeds" onclick="calculateTotal(10, 'seeds')">
+                        <label for="seeds"> Seeds ($10.00)</label><br>
+                        <input type="checkbox" id="sweeteners" name="sweeteners" value="Sweeteners" onclick="calculateTotal(50, 'sweeteners')">
+                        <label for="sweeteners"> Sweeteners ($50.00)</label><br>
+                    </td>
+                    <tr>
+                        <td colspan="4" >
+                            <button type="button" id="orderBtn">Order</button>
+                        </td>
+                    </tr>
+                </tr>
+            </table>
+        </form>
+	</section>
+    <section>
+        <h1>Thanks for the order.</h1>
+        <table>
+            <tr>
+                <td>Customer Name:</td>
+                <td><label id="name"></label></td>
+            </tr>
+            <tr>
+                <td>Contact Details:</td>
+                <td><label id="contact"></label></td>
+            </tr>
+            <tr>
+                <td>Ingredients:</td>
+                <td><label id="ingredientsList"></label></td>
+            </tr>
+            <tr>
+                <td>Total Amount:</td>
+                <td><label id="totalAmount"></label></td>
+            </tr>
+        </table>    
+    </section>
+	<script src="js/smoothie.js"></script>
+</body>
+</html>
